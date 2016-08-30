@@ -1,0 +1,69 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <input id="searchText" class="form-control" type="search" placeholder="enter person name..." ng-model="searchText" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="col-md-12">
+                <div class="row"><h3>People</h3></div>
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Age Group</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="person in people  | filter:search">
+                            <td class="col-md-7" ng-bind-html="highlight(person.FirstName + ' ' + person.LastName, filterText)"></td>
+                            <td class="col-md-2">{{person.Age}}</td>
+                            <td class="col-md-2">{{person.AgeGroup}}</td>
+                            <td class="col-md-1">
+                                <a ng-click="openEditForm(person)"><i class="fa fa-pencil fa-lg menu-icon" aria-hidden="true"></i></a>
+                                <a ng-click="delete(person)"><i class="fa fa-trash fa-lg menu-icon" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-md-1 col-md-offset-11">
+                        <a ng-click="openNewPersonForm()"><i class="fa fa-plus fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="col-md-12">
+                <div class="row">
+                    <h3>Age Groups</h3>
+                </div>
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ageGroup in ageGroups">
+                                <td class="col-md-8">{{ageGroup.Description}}</td>
+                                <td class="col-md-2">{{ageGroup.MinAge}}</td>
+                                <td class="col-md-2">{{ageGroup.MaxAge}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
