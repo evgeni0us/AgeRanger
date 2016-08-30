@@ -5,6 +5,9 @@ using Dapper;
 
 namespace AgeRanger.Data.Repositories
 {
+    /// <summary>
+    /// Implementation for SqLite
+    /// </summary>
     public class SqLitePersonRepository : IPersonRepository
     {
         private readonly IDbConnectionManager connectionManager;

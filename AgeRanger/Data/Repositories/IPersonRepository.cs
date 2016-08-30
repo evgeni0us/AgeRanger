@@ -2,6 +2,9 @@
 
 namespace AgeRanger.Data.Repositories
 {
+    /// <summary>
+    /// Declares simple CRUD logic for Person table
+    /// </summary>
     public interface IPersonRepository
     {
         Person Insert(Person person);

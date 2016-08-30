@@ -1,6 +1,9 @@
 ﻿
 namespace AgeRanger.Model.DTO
 {
+    /// <summary>
+    /// DTO for Person object
+    /// </summary>
     public class DetailedPerson
     {
         public long Id { get; set; }

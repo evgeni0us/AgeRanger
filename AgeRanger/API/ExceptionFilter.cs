@@ -8,6 +8,9 @@ using System.Web.Http.ExceptionHandling;
 
 namespace AgeRanger.API
 {
+    /// <summary>
+    /// Standrard exception handler for the Web API project
+    /// </summary>
     public class WebExceptionHandler : ExceptionHandler
     {
         public override void Handle(ExceptionHandlerContext context)

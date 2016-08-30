@@ -1,5 +1,8 @@
 ﻿namespace AgeRanger.Model.DTO
 {
+    /// <summary>
+    /// DTO for AgeGroup oibject
+    /// </summary>
     public class AgeGroup
     {
         public long Id { get; set; }

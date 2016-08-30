@@ -11,6 +11,9 @@ using AgeGroup = AgeRanger.Data.AgeGroup;
 
 namespace AgeRanger.Tests
 {
+    /// <summary>
+    /// Unit tests for AgeRangerService
+    /// </summary>
     [TestFixture]
     public class AgeRangerServiceTest
     {

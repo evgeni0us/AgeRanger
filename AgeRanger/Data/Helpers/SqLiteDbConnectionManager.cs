@@ -6,6 +6,9 @@ using System.IO;
 
 namespace AgeRanger.Data.Helpers
 {
+    /// <summary>
+    /// Implementation for SqLite
+    /// </summary>
     public class SqLiteDbConnectionManager : IDbConnectionManager
     {
         public static string DbFile => AppDomain.CurrentDomain.BaseDirectory + ConfigurationManager.AppSettings["db-file-name"];

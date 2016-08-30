@@ -2,6 +2,9 @@
 
 namespace AgeRanger.Data.Helpers
 {
+    /// <summary>
+    /// Declares connection manager
+    /// </summary>
     public interface IDbConnectionManager
     {
         DbConnection DbConnection();
