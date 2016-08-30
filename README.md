@@ -1,20 +1,41 @@
-AgeRanger is a world leading application designed to identify person's age group!
-The only problem with it is... It is not implemented - except a SQLite DB called AgeRanger.db.
+AgeRanger web site is implemented and good to go! Sales manager should be proud of his IT team! :-)
 
-To help AgeRanger to conquer the world please implement a web application that communicates with the DB mentioned above, and does the following:
+Most important technologies and frameworks:
+	Server-side:
+		ASP.NET 4
+		APS.NET Web API 2
+		Ninject
+		Dapper
+		NLog
+		Swashbuckle
+	
+	Front-end:
+		Angular 1.5
+		Bootstrap 3
+		angular-bootstrap
+		
+	Unit testing:
+		NUnit
+		Moq
+		Jasmine
+		PhantomJS
 
- - Allows user to add a new person - every person has the first name, last name, and age;
- - Displays a list of people in the DB with their First and Last names, age and their age group. The age group should be determened based on the AgeGroup DB table - a person belongs to the age group where person's age >= 
- than group's MinAge and < than group's MaxAge. Please note that MinAge and MaxAge can be null;
- - Allows user to search for a person by his/her first or last name and displays all relevant information for the person - first and last names, age, age group.
+	Visual Studio extensions:
+		ReSharper - used as Jasmine and NUnit tests runtime.
 
-In our fantasies AgeRanger is a single page application, and our DBA has already implied that he wants us to migrate it to SQL Server some time in the future.
-And unit tests! We love unit tests!
+	
+Demo web site - http://ageranger.azurewebsites.net/#/
 
-Last, but not the least - our sales manager suggests you'll get bonus points if the application will also allow user to edit existing person records and expose a WEB API.
+Demo API page - http://ageranger.azurewebsites.net/swagger/ui/index
 
-Please fork the project.
 
-You are free to use any technology and frameworks you need. However if you decide to go with third party package manager or dev tool - don't forget to mention them in the README.md of your fork.
+Further improvements:
+1. Add server-side paging and search
+2. Move setting of AgeGroup from Linq query to SQL query
+3. Implement caching
+4. Implement security
 
-Good luck!
+
+
+Cheers,
+Evgeni0us
