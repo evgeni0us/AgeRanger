@@ -93,31 +93,5 @@ describe('Controller: People', function () {
         ]);
     });
 
-    it('should create new libraries and append it to the list', function () {
-        // We simulate we entered a new library name
-        scope.newItemName = "Durandal";
-
-        // And that we clicked a button or something
-        scope.create();
-
-        scope.$digest();
-
-        var lastLibrary = scope.libraries[scope.libraries.length - 1];
-
-        expect(lastLibrary).toEqual({
-            id: 4,
-            name: 'Durandal'
-        });
-    });
-
-    it('should redirect us to a library details page', function () {
-        spyOn($location, 'path');
-
-        var aLibrary = scope.libraries[0];
-
-        // We simulate we clicked a library on the page
-        scope.goToDetails(aLibrary);
-
-        expect($location.path).toHaveBeenCalledWith('/libraries/0/details');
-    });
+   
 });
